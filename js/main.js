@@ -1,3 +1,4 @@
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
@@ -16,35 +17,38 @@ while (pcPoint < 3 && userPoint < 3) {
     if (userChoice === "pierre") {
       if (pcChoice === 1) {
         alert("Vous avez perdu cette manche, 1 point de plus pour le PC!");
-        pcPoint ++;
+        pcPoint++;
       } else if (pcChoice === 2) {
         alert("Vous avez gagné cette manche, 1 point de plus pour vous !");
+        userPoint++;
       } else {
         alert("Egalité !");
       }
     } else if (userChoice === "feuille") {
       if (pcChoice === 2) {
         alert("Vous avez perdu cette manche, 1 point de plus pour le PC!");
-        pcPoint ++;
+        pcPoint++;
       } else if (pcChoice === 0) {
         alert("Vous avez gagné cette manche, 1 point de plus pour vous !");
+        userPoint++;
       } else {
         alert("Egalité !");
       }
-      else (userChoice === "ciseaux") {
-        if (pcChoice === 0) {
-          alert("Vous avez perdu cette manche, 1 point de plus pour le PC!");
-          pcPoint ++;
-        } else if (pcChoice === 1) {
-          alert("Vous avez gagné cette manche, 1 point de plus pour vous !");
-        } else {
-          alert("Egalité !");
-        }
+    } else {
+      if (pcChoice === 0) {
+        alert("Vous avez perdu cette manche, 1 point de plus pour le PC!");
+        pcPoint++;
+      } else if (pcChoice === 1) {
+        alert("Vous avez gagné cette manche, 1 point de plus pour vous !");
+        userPoint++;
+      } else {
+        alert("Egalité !");
       }
     }
   }
 }
-if (pc Point === 3) {
+
+if (pcPoint === 3) {
   alert("Vous avez perdu !");
 } else {
   alert("Vous avez gagné !");
