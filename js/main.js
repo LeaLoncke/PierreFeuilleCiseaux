@@ -4,6 +4,7 @@ var paragraph = document.getElementById("result");
 var score = document.getElementById("score");
 var divsSection = document.getElementById("divsChoice");
 var endGame = document.getElementById("endGame");
+var button = document.getElementById("onloadButton");
 
 var pcPoint = 0;
 var userPoint = 0;
@@ -63,6 +64,8 @@ function game(element){
     if (pcPoint === 3 || userPoint === 3) {
       divsChoice.style.display = "none";
       endGame.style.display = "block";
+      button.style.display = "block";
+
       if (pcPoint > userPoint) {
         endGame.innerHTML = "Vous avez perdu la partie !";
       } else {
@@ -74,6 +77,8 @@ function game(element){
 }   // fin game()
 
 endGame.style.display = "none";
+button.style.display = "none";
+
 
 for (var i = 0; i < divs.length; i++) {
   divs[i].onclick = function() {
@@ -81,7 +86,9 @@ for (var i = 0; i < divs.length; i++) {
   };
 }   // détermine le paramètre de game()
 
-
+button.onclick = function() {
+  document.location.reload(true);
+};
 
 
 
